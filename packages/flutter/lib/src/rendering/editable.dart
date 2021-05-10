@@ -747,8 +747,12 @@ class RenderEditable extends RenderBox with RelayoutWhenSystemFontsChangeMixin {
     int? lastNonWhitespace;
     for (final String currentString in string.characters) {
       if (!includeWhitespace &&
+<<<<<<< HEAD
           !_isWhitespace(
               currentString.characters.first.toString().codeUnitAt(0))) {
+=======
+          !_isWhitespace(currentString.characters.first.codeUnitAt(0))) {
+>>>>>>> 6e08ea0a2cc0985c7ebc0acae83f3e780dd67499
         lastNonWhitespace = count;
       }
       if (count + currentString.length >= index) {
